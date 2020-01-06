@@ -52,16 +52,6 @@ export class ArtikliService {
       this.toastr.success("Artikal " + artikal.naziv + ' je uspješno dodan u shopping listu!', 'Dodano!', { timeOut: 7000 });
       this.promjenjenaLista.next(this.artikli.slice());
     }
-
-    /*    if (this.dodatiArtikal.indexOf(artikal) == -1) {
-          this.dodatiArtikal.push(artikal);
-          this.toastr.success("Artikal " + artikal.naziv + ' je uspješno dodan u shopping listu!', 'Dodano!', { timeOut: 7000 });
-        } else {
-          artikal.kolicina++;
-          this.toastr.info("Artikal " + artikal.naziv + " je još jednom dodan u listu!", "Ponovo dodan!", { timeOut: 7000 });
-        }
-        this.promjenjenaLista.next(this.artikli.slice());
-    */
   }
 
   izbrisiDodatiArtikal(i: number) {
