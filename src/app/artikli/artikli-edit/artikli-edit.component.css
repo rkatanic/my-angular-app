@@ -1,0 +1,156 @@
+.forma {
+  margin-top: 60px;
+  margin-left: 150px;
+}
+
+.col-xs-12 {
+  width: 500px;
+}
+
+input, textarea {
+  border-radius: 1rem;
+}
+
+#cijena {
+  width: 100px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 2px solid #ff6060;
+}
+
+textarea.ng-invalid.ng-touched {
+  border: 2px solid #ff6060;
+}
+
+.btn:disabled {
+  cursor: no-drop;
+}
+
+.btn {
+  margin-bottom: 15px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+label {
+  font-weight: bold;
+}
+
+span {
+  color: #fc372d;
+}
+
+img {
+  border-radius: 2rem;
+  margin-right: 250px;
+  margin-top: 25px;
+  width: 500px;
+  height: 500px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+@media only screen and (max-width:600px) {
+  .forma {
+    margin-left: 10% !important;
+    margin: auto;
+    margin-top: 250px;
+  }
+
+  .col-xs-12 {
+    width: 95%;
+  }
+
+  img {
+    text-align: center !important;
+    position: absolute;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    margin-top: -250px;
+    margin-left: 25%;
+  }
+
+  #dugmad {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:800px) {
+  .forma {
+    margin-left: 20% !important;
+    margin: auto;
+    margin-top: 250px;
+  }
+
+  .col-xs-12 {
+    width: 95%;
+  }
+
+  img {
+    text-align: center !important;
+    position: absolute;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    margin-top: -250px;
+    margin-left: 35%;
+  }
+
+  #dugmad {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width:800px) and (max-width:1000px) {
+  .forma {
+    margin-left: 20% !important;
+    margin: auto;
+    margin-top: 250px;
+  }
+
+  .col-xs-12 {
+    width: 95%;
+  }
+
+  img {
+    text-align: center !important;
+    position: absolute;
+    margin: auto;
+    width: 300px;
+    height: 250px;
+    margin-top: -250px;
+    margin-left: 30%;
+  }
+
+  #dugmad {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width:1000px) and (max-width:1500px) {
+  .forma {
+    margin-left: 10%;
+  }
+
+  img {
+    border-radius: 2rem;
+    margin-right: 10%;
+    margin-top: 35px;
+    width: 400px;
+    height: 400px;
+  }
+}

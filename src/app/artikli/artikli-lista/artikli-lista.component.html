@@ -1,0 +1,10 @@
+
+<div class="row">
+  <div class="col-lg-9">
+    <app-artikli-item
+      *ngFor="let artikalEl of artikli;let i=index"
+      [artikal] ="artikalEl"
+      [index]="i"
+    ></app-artikli-item>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+b {
+  color: #1497e2;
+}
+
+.badge-primary {
+  color: white;
+}
+
+.input-group-text {
+  width: 100px;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+
+img {
+  width: 250px;
+  height: 200px;
+  border-radius: 2rem;
+}
+
+.btn-outline-danger {
+  border: 2px;
+  border-style: outset;
+  font-weight: bold;
+}
+
+.badge {
+  border-radius: 3rem;
+}
+
+@media only screen and (max-width:1200px) {
+  tr{
+    text-align: center;
+  }
+}

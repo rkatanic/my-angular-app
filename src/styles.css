@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr.css';
+
+.login {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("C:\Users\PC\Desktop\Angular\projekat\src\slike\login.jpg");
+}
+
+.registracija {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("C:\Users\PC\Desktop\Angular\projekat\src\slike\registracija.jpg");
+}
+
+
+
+.str-nije-pronadjena{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("C:\Users\PC\Desktop\Angular\projekat\src\slike\404.jpg");
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+.btn {
+  border-radius: 3rem;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.btn-default {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+.btn-default:hover {
+  background-color: green;
+  color: white;
+}
+
+.btn-primary {
+  color: #1497e2;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #1497e2;
+  color: white;
+}
+
+.btn-success {
+  color: green;
+}
+
+.btn-success:hover {
+  background-color: green;
+  color: white;
+}

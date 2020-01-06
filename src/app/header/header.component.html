@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/" >
+ e-trgovina
+  </a>
+  <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+  class="collapse navbar-collapse"
+  id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/artikli">
+          <i class="fas fa-list-ul"></i>
+        Artikli</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/shopping-lista">
+        <i class="fas fa-shopping-cart"></i>
+        Lista za kupovinu</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/novi-artikal">
+          <i class="fas fa-plus-square"></i>
+         Novi artikal</a>
+      </li>
+    </ul>
+    <div>
+      <ng-template [ngIf]="!authService.isAuthenticated()">
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/registracija"><i class="fas fa-user-plus"></i> Registracija</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+      </ul>
+    </ng-template>
+    </div>
+  <div *ngIf="authService.isAuthenticated()">
+    <ul class="navbar-nav">
+      <li class="nav-item" style="cursor:pointer">
+        <a class="nav-link" (click)="onOdjava()"><i class="fas fa-sign-out-alt"></i> Odjava</a>
+      </li>
+    </ul>
+  </div>
+    <div class="dropdown dropdown-responsive" *ngIf="authService.isAuthenticated()">
+      <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-cogs"></i> Upravljanje podacima
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" (click)="sacuvajPodatke()">Sačuvaj podatke</a>
+        <a class="dropdown-item" (click)="fetching()">Fetching</a>
+      </div>
+    </div>
+
+  </div>
+
+</nav>

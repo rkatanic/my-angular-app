@@ -1,0 +1,93 @@
+<div class="slika">
+  <img
+  align="right"
+  [src]="slikaURL.value"
+  class="img-responsive"
+  alt="Unesite URL slike za preview!">
+</div>
+
+<div class="row forma">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <form [formGroup]="artikalForm" (ngSubmit)="onSubmit()">
+      <div class="row" id="dugmad">
+        <div class="col-xs-12">
+          <button
+          [disabled]="!artikalForm.valid"
+          type="submit"
+          class="btn btn-success">Sačuvaj</button>
+          <button
+          (click)="ocistiFormu()"
+          type="button"
+          class="btn btn-outline-primary">Očisti</button>
+          <button
+          (click)="otkazi()"
+          type="button"
+          class="btn btn-outline-danger">Otkaži</button>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="naziv">Naziv</label>
+            <input
+             placeholder="Unesite naziv artikla ..."
+             formControlName="naziv"
+             id="naziv"
+             type="text"
+             class="form-control">
+              <span *ngIf="!artikalForm.get('naziv').valid && artikalForm.get('naziv').touched">*Ovo polje je obavezno! (minimum 6 karaktera)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="slikaURL">URL slike</label>
+            <input
+             #slikaURL
+             placeholder="Unesite URL slike ..."
+             formControlName="slikaURL"
+             id="slikaURL"
+             type="text"
+             class="form-control">
+             <span *ngIf="!artikalForm.get('slikaURL').valid && artikalForm.get('slikaURL').touched">*Ovo polje je obavezno!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="opis">Opis</label>
+            <textarea
+              placeholder="Dodajte opis artikla ..."
+              formControlName="opis"
+              rows="6"
+              id="opis"
+              type="text"
+              class="form-control"></textarea>
+               <span *ngIf="!artikalForm.get('opis').valid && artikalForm.get('opis').touched">*Ovo polje je obavezno!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="cijena">Cijena (<i>KM</i>)</label>
+            <input
+             formControlName="cijena"
+             id="cijena"
+             type="number"
+             class="form-control">
+              <span *ngIf="!artikalForm.get('cijena').valid && artikalForm.get('cijena').touched">*Ovo polje je obavezno!</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </form>
+  </div>
+</div>

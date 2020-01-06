@@ -1,0 +1,50 @@
+<div id="item"
+class="list-group-item">
+  <div class="itemlist">
+    <div class="row row-sm-6">
+      <div class="col-sm">
+        <div class="img-wrap text-center">
+          <img [src]="artikal.slika" class="img-md" style="max-height:100px;border-radius:1rem;">
+        </div>
+      </div> <!-- col.// -->
+
+      <div class="col-md-5">
+        <div class="text-wrap">
+          <h4 class="title">{{artikal.naziv}} </h4>
+          <p>{{artikal.opis}}</p>
+        </div>
+      </div> <!-- col.// -->
+
+      <div class="col-md-3 border-left">
+        <div align="center">
+          <div class="price-wrap">
+            <h4> {{artikal.cijena}} <b>KM</b></h4>
+          </div>
+          <p class="text-success" style="font-style:italic;">
+            (po komadu)
+          </p>
+
+          <div class="row" align="center" style="margin-left:10px;" >
+            <button
+            title="Dodaj artikal u shopping listu"
+            type="button"
+            class="btn btn-primary"
+            (click)="onDodajUShoppingListu()">
+              <i class="fas fa-cart-plus"></i>
+            </button>
+
+            <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-wrench"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" (click)="editArtikal()">Izmjeni artikal</a>
+                <a class="dropdown-item" (click)="ukloniArtikal()">Ukloni artikal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- col.// -->
+    </div> <!-- row.// -->
+  </div> <!-- itemlist.// -->
+</div> <!-- row.// -->

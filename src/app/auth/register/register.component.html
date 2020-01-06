@@ -1,0 +1,37 @@
+<div class="center-div">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <div class="row">
+      <div class="col-xs-1-12" style="margin:5px">
+        <p>Vec ste registrovani? <button type="button" class="btn btn-info" (click)="navigateToPrijava()">Prijavi Se!</button></p>
+      </div>
+    </div>
+    <form (ngSubmit)="onRegister(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input
+        class="form-control"
+        type="text"
+        id="email"
+        name="email"
+        placeholder="Unesite email..."
+        ngModel>
+      </div>
+
+      <div class="form-group">
+        <label for="lozinka">Lozinka</label>
+        <input
+        class="form-control"
+        type="password"
+        id="lozinka"
+        name="lozinka"
+        placeholder="Unesite lozinku..."
+        ngModel>
+      </div>
+
+      <div class="row">
+        <button class="btn btn-success" type="submit">Registruj Se!</button>
+      </div>
+
+    </form>
+  </div>
+</div>

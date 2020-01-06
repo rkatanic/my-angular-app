@@ -1,0 +1,69 @@
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead class="text-muted">
+      <tr>
+        <th scope="col">Artikal</th>
+        <th scope="col" width="330">Ukupna vrijednost liste:   <b>{{total}}</b> KM</th>
+        <th scope="col" width="250">Ukupna cijena po artiklu</th>
+        <th scope="col" width="100">Količina</th>
+        <th scope="col" width="150">Cijena</th>
+        <th scope="col" width="150" class="text-right">Opcije</th>
+      </tr>
+    </thead>
+
+    <tbody
+    *ngFor="let artikal of dodatiArtikal;let i=index;">
+      <tr>
+        <td>
+          <div class="media">
+            <div class="img-wrap">
+              <img
+              [src]="artikal.slika"
+              class="img-responsive">
+            </div>
+
+            <div class="col-md-12">
+              <h4 class="title text-truncate">
+                {{artikal.naziv}}</h4>
+              <p align="justify">{{artikal.opis}}</p>
+              </div>
+          </div>
+        </td>
+  <td></td>
+        <td>
+        <span class="input-group-text">{{zaokruzi(artikal.cijena*artikal.kolicina)}}</span>
+
+      </td>
+
+        <td>
+          <h4><span class="badge badge-primary">{{artikal.kolicina}}</span></h4>
+        </td>
+        <td>
+          <div
+          class="price-wrap">
+            <h4>
+              {{artikal.cijena}} <b>KM</b>
+            </h4>
+            <small class="text-muted">(po komadu)</small>
+          </div> <!-- price-wrap .// -->
+        </td>
+        <td align="right">
+          <button
+          title="Ukloni artikal iz korpe"
+          type="button"
+          class="btn btn-outline-danger"
+          (click)="onizbrisiIzKorpe(i)">X</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div align="center">
+    <span *ngIf="total===0">
+    <h4>Lista za kupovinu je prazna!</h4>
+  </span>
+  </div>
+
+</div> <!-- card.// -->

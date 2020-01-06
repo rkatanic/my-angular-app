@@ -1,0 +1,65 @@
+b {
+  color: #1497e2;
+}
+
+#item {
+  width: auto;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 30%;
+  display: block;
+}
+
+#item:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 11px 11px 24px -11px rgba(0, 0, 0, 0.98);
+  -moz-box-shadow: 11px 11px 24px -11px rgba(0, 0, 0, 0.98);
+  box-shadow: 11px 11px 24px -11px rgba(0, 0, 0, 0.98);
+  transition: 0.5s;
+}
+
+@media only screen and (max-width:600px) {
+  #item {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .btn {
+    margin-left: 33%;
+  }
+  .text-wrap{
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:800px)  {
+  #item{
+    margin: auto;
+    margin-bottom: 5px;
+  }
+  .text-wrap{
+    text-align: center;
+  }
+  .btn{
+    margin-left: 37%;
+  }
+}
+
+@media only screen and (min-width:800px) and (max-width:1000px){
+  #item{
+    margin:auto;
+    margin-bottom:5px;
+  }
+  .btn{
+    margin-left: 10%;
+  }
+}
+@media only screen and (min-width:1000px) and (max-width:1300px){
+#item{
+  margin-left:25%;
+  margin-bottom: 5px;
+}
+.btn{
+  margin-left: 0;
+}
+}
